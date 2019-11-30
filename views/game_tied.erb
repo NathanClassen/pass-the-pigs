@@ -1,0 +1,16 @@
+<div class="game_panel">
+  <h1> Tied for 1st Place we have </h1>
+  <ul>
+   <% @winners.each do |player| %>
+     <h1> <%= player.name %> </h1>
+   <% end %>
+   <h2> Congratulations Pig Tossers! </h2>
+  </ul>
+
+  <form action="/another_game" method="get">
+    <button type="submit"> Give it Another Go! </button>
+  </form>
+</div>
+<form action="/quit_game" method="get">
+  <button type="submit"> Quit Game </button>
+</form>

@@ -1,0 +1,59 @@
+<div class="game_panel">
+  <ul class="players_list">
+    <h3 class="spaced_lettering"> Totals </h3>
+    <% game.players.each do |player| %>
+      <li>
+        <div><p><%= player.name %>:</p><p><%= player.game_score %></p></div>
+      </li> 
+    <% end %>
+    <h3 style="margin-top: 40px;"> Round: <%= game.round %> </h3>
+  </ul>
+
+  <div class="player_entry_panel">
+    <h3> Currently tossing: <%= @current_player.name %>! </h3>
+
+    <h3> Current Score: <%= @current_player.round_score %></h3>
+
+    <% if player_can_roll?(@current_player) %>
+      <div class='the_toss'>
+        <p> THE TOSS: </p>
+        <% if @results != nil %>
+        <ul>
+          <% @results.each do |pig|
+            pig_faces_hash = {
+              "pnk" => "🐖",
+              "dot" => "🐖·",
+              "rzr" => "🥓",
+              "trt" => "🐷",
+              "snt" => "🐽",
+              "jow" => "🐗"
+            }
+          %>
+            <li class='pig_die'> <%= pig_faces_hash[pig] %> </li>
+          <% end %>
+        </ul>
+        <% end %>
+      </div>
+      <form class='play_buttons' action="/roll" method="post">
+        <button type="submit"> Toss Pigs </button>
+      </form>
+
+      <% if @current_player.round_score > 0 %>
+        <form class='play_buttons' action="/pass_play" method="get">
+          <button type="submit"> Hold Pigs </button>
+        </form>
+      <% end %>
+    <% else %>
+      <div class="the_toss">
+        <h1 id="pig_out"> YOU PIGGED OUT! </h1>
+      </div>
+      <form class='play_buttons' action="/pass_play" method="get">
+        <button type="submit"> Next Tosser! </button>
+      </form>
+    <% end %>
+  </div>
+</div>
+
+<form action="/quit_game" method="get">
+  <button type="submit"> Quit Game </button>
+</form>

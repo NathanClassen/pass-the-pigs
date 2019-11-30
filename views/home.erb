@@ -1,0 +1,34 @@
+<div class="game_panel">
+  <h3 class="spaced_lettering" style="margin-bottom: 40px;">Welcome</h3>
+  <h5> Choose Your Game Style </h5>
+
+  <form class='game_type' action="/initialize_game" method="post">
+    <input type="hidden" name="game_type" value="f_to_100" />
+    <button type="submit"> First to 100 </button>
+  </form>
+
+  <form class='game_type' action="/initialize_game" method="post">
+    <input type="hidden" name="game_type" value="b_O_O_10" />
+    <button type="submit"> 10 Rounds </button>
+  </form>
+</div>
+
+<button id="help"> instructions </button>
+
+<div class="game_panel instructions modal">
+  <header>
+    <h1 class='title'> <span class="golden">~</span> Pass the Pigs <span class="golden">~</span> </h1>
+  </header>
+  <h1 class="spaced_lettering"> Pig Passin Instruction </h1>
+  <h4> Object of the Game </h4>
+  <p> Toss the pigs, score as many points as you can. Player with the highest points wins! </p>
+  <h4> Gameplay </h4>
+  <p>
+    Players take turns "passing pigs". For each turn, a player wants to score as high as he or she can <em>for that turn</em> without <strong>PIGGING OUT</strong>. A player pigs out, when a non-scoring role is thrown. You never know when it will happen! In the event of a pig out, that players points, <em>for that turn</em> are set back to 0 and player passes on.
+  </p>
+  <p>
+    After the player's turn has ended, either by choosing to keep the points they have accrued or by pigging out, their points for that turn are added to their total and play passes on.
+    The player with the most points at the end of the game (first to 100 or best out of ten turns) wins!
+  </p>
+</div>
+<div class="modal_layer"></div>

@@ -1,0 +1,36 @@
+<div class='game_panel'>
+  <ul class='players_list'>
+    <h3 class="spaced_lettering"> Players </h3>
+    <% @players.each do |player| %>
+      <li>
+        <p> <%= player.name %> </p>
+      </li>
+    <% end %>
+  </ul>
+
+  <div class='player_entry_panel'>
+    <% if @players.count < 4 %>
+      <form action="/name_entry" method="post">
+        <input type="text" name="player_name" size= "30" />
+        <button type="submit"> Submit your Champion </button>
+      </form>
+      <% if @players.count > 0 %>
+        <h5> Or... </h5>
+        <form action="/bot_entry" method="post">
+          <p> Summon a phantom pig tosser </p>
+          <button type="submit"> Summon Phantom </button>
+        </form>
+      <% end %>
+    <% end %>
+
+
+    <% if @players.count >= 2 %>
+      <form action="/begin_game" method="get">
+        <button type="submit"> Begin Tossing! </button>
+      </form>
+    <% end %>
+  </div>
+</div>
+<form action="/another_game" method="get">
+  <button type="submit"> Main Menu </button>
+</form>

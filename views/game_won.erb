@@ -1,0 +1,13 @@
+<div class="game_panel">
+  <h1> And the Winner is... </h1>
+
+  <h2 class="player_banner"> <%= @winner.name %>!! </h2>
+  <h3> With a score of <%= @winner.game_score %> </h3>
+
+  <form action="/another_game" method="get">
+    <button type="submit"> Give it Another Go! </button>
+  </form>
+</div>
+<form action="/quit_game" method="get">
+  <button type="submit"> Quit Game </button>
+</form>

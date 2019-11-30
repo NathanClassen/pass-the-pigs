@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <title>Pass the Pigs </title>
+    <link href="/whitespace_reset.css" rel="stylesheet" type="text/css" />
+    <link href="/main.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="/main.js"></script>
+  </head>
+  <body>
+    <div class='wrapper'>
+      <header>
+        <h1 class='title'> <span class="golden">~</span> Pass the Pigs <span class="golden">~</span> </h1>
+      </header>
+      <% if session[:message] %>
+        <p class="flash"> <%= session.delete(:message) %> </p>
+      <% end %>
+      <%= yield %>
+    </div>
+  </body>
+</html>
+
+

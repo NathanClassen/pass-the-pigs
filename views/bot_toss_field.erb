@@ -1,0 +1,18 @@
+<ul>
+  <p> _____Standing Totals_____ </p>
+  <% @players.each do |player| %>
+    <li>
+      <p><%= player.name %>: <%= player.game_score %></p>
+    </li> 
+  <% end %>
+</ul>
+
+
+<p> Currently tossing, we have <%= @current_player.name %>! </p>
+<h5> Current Score: <%= @current_player.round_score %>
+
+<% if player_can_roll?(@current_player) %>
+  <p> THE TOSS: <%= @results %> </p>
+<% else %>
+  <p> YOU PIGGED OUT! </p>
+<% end %>

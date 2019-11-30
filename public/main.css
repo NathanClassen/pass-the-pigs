@@ -1,0 +1,190 @@
+html {
+  font-size: 16px;
+}
+
+button {
+  background: #FFA199;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 3px;
+}
+
+div.wrapper {
+  background: #f3fcf2;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin: 15px auto 0 auto;
+  padding: 0 100px;
+  text-align: center;
+  width: 800px;
+}
+
+header {
+  margin-bottom: .5em;
+}
+
+h1.title {
+/*  background: #FFA199; */
+  border-bottom: black solid 3px;
+  box-sizing: border-box;
+  font-size: 2em;
+  text-align: center;
+}
+
+h1#pig_out {
+  font: #2e2515;
+  font-family: 'Trattatello', cursive;
+  font-size: 35px;
+  margin: 35px 0 0 35px;
+}
+
+.modal {
+  background: #f3fcf2;
+  display: none;
+  left: 50%;
+  margin: 0 0 0 -400px;
+  padding: 25px 70px 70px 70px;
+  position: absolute;
+  text-align: left;
+  top: 100px;
+  width: 660px;
+  z-index: 3;
+}
+
+.modal h4 {
+  margin: 10px 0;
+}
+
+.modal_layer {
+  background: rgba(0,0,0,.3);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.spaced_lettering {
+  letter-spacing: 0.6em;
+}
+
+h3 {
+  margin: 0 10px 10px;
+}
+
+h2.player_banner {
+  box-sizing: border-box;
+  border: #C88 dotted 5px;
+  font-family: 'Trattatello', 'Luminari', 'Apple Chancery', cursive, fantasy;
+  font-size: 30px;
+  margin: 15px 0;
+  padding: 20px 30px;
+}
+
+p.flash {
+  background: #FFdddd;
+  border-radius: 3px;
+  padding: 2px;
+  position: fixed;
+  top: 333.4px;
+}
+
+div.instructions {
+  text-align: left;
+}
+
+.instructions h1 {
+  letter-spacing: 0.6em;
+  text-align: center;
+}
+
+form.game_type {
+  display: inline-block;
+  width: 100px;
+}
+
+form.game_type button {
+  background: #FFA199;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bolder;
+  text-shadow: none;
+  height: 40px;
+  width: 100%;
+}
+
+div.game_panel {
+  height: 300px;
+}
+
+ul.players_list {
+  border-right: black solid 1px;
+  box-sizing: border-box;
+  display: inline-block;
+  height: 269px;
+  list-style: none;
+  text-align: left;
+  vertical-align: top;
+  width: 35%;
+}
+
+ul.players_list li p {
+  font-family: cursive;
+}
+
+ul.players_list li div p {
+  display: inline-block;
+  width: 80%;
+}
+
+ul.players_list li div p+p {
+  text-align: right;
+  width: 10%;
+}
+
+div.player_entry_panel {
+  display: inline-block;
+  text-align: left;
+  width: 64%;
+}
+
+.player_entry_panel form {
+  margin-bottom: 10px;
+}
+
+.player_entry_panel p {
+  display: inline-block;
+  width: 224px;
+}
+
+div.game_panel + form {
+  text-align: left;
+}
+
+div.the_toss {
+  background: #FAF9E1;
+  height: 120px;
+  margin: 0 0 10px 10px;
+  padding: 5px 0 0 5px;
+}
+
+form.play_buttons {
+  display: inline-block;
+  width: 100px;
+}
+
+form.play_buttons button {
+  height: 20px;
+  width: 100%;
+}
+
+li.pig_die {
+  display: inline-block;
+  font-size: 80px;
+  margin-left: 55px;
+  height: 100px;
+  width: 100px;
+}
